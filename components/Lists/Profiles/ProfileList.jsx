@@ -8,6 +8,7 @@ function ProfileList() {
   useEffect(() =>{
     fetch("http://localhost:3001/people")
     .then(response => response.json())
+    .then(res=> res.sort((a, b) => a.age - b.age))
     .then(result => setData(result))
   }, []);
 

@@ -10,12 +10,12 @@ function PageLayout({children , title}) {
         {/* hope to have permision for using the favicon */}
         <link rel="shortcut icon" href="https://www.datasketch.co/favicon.ico" type="image/x-icon" />
       </Head>
-      <header className="p-4 flex justify-between sticky top-0 bg-white">
+      <header className="p-4 flex justify-between sticky top-0 bg-white z-10">
         <h2 className="text-2xl">
           Tests <span className="font-extrabold text-red-violet">app</span>
         </h2>
       </header>
-      <nav className="p-4 sticky top-2 flex justify-end">
+      <nav className="p-4 sticky top-2 flex justify-end z-20">
         <ul className="flex w-[40vw] justify-evenly text-2xl text-robin-s-egg-blue-700">
           <li>
             <p onClick={()=>{history.back()}}>{<FaArrowAltCircleLeft className="cursor-pointer hover:text-robin-s-egg-blue-600 transition"/>}</p>

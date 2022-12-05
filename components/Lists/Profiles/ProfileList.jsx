@@ -1,21 +1,12 @@
 import ListsContainer from "../ListsContainer";
 import ProfileCard from "./ProfileCard";
-import { useState, useEffect } from "react";
 
-function ProfileList() {
-  const [data, setData] = useState([]);
-
-  useEffect(() =>{
-    fetch("http://localhost:3001/people")
-    .then(response => response.json())
-    .then(res=> res.sort((a, b) => a.age - b.age))
-    .then(result => setData(result))
-  }, []);
-
+export default function ProfileList({ people }) {
   return (
     <ListsContainer>
       <div className="grid gap-4 justify-center auto-rows-min md:auto-cols-max w-full h-full rounded-md p-4">
-        {data.map((profileEX) => (
+        {people.length === 0 && <p>No hay datos</p>}
+        {people.length > 0 && people.map((profileEX) => (
           <ProfileCard
             key={profileEX.id}
             id={profileEX.id}
@@ -29,5 +20,3 @@ function ProfileList() {
     </ListsContainer>
   );
 }
-
-export default ProfileList;

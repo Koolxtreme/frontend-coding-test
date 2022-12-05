@@ -13,7 +13,7 @@ You'll be creating a `static website` with Next.js that uses an API to read and 
 The following is the list of requirements you must complete:
 
 **Home page**
-- [ ] When the user visits the homepage of the app, a list of people is displayed. Each list item must show the person's picture, full name, age, and occupation. By default, the people are listed in order from the youngest to the oldest. This ordering can be achieved by sorting the list of people by their age in ascending order, so that the youngest person is shown first and the oldest person is shown last. This default ordering can be changed by the user, if desired, using a sorting control on the page.
+- [x] When the user visits the homepage of the app, a list of people is displayed. Each list item must show the person's picture, full name, age, and occupation. By default, the people are listed in order from the youngest to the oldest. This ordering can be achieved by sorting the list of people by their age in ascending order, so that the youngest person is shown first and the oldest person is shown last. This default ordering can be changed by the user, if desired, using a sorting control on the page.
 - [ ] When the user clicks on a list item, they are redirected to the profile page at `/profile/<id>`, where `<id>` is a dynamic value representing the unique identifier of the person.
 
 **Profile page**

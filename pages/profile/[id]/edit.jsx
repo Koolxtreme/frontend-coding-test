@@ -1,11 +1,24 @@
 import PageLayout from "../../../components/PageLayout";
+import EditionForm from "../../../components/Lists/Profiles/EditionForm";
 
-function edit() {
+export default function Edit({ profile }) {
   return (
-    <PageLayout title={`Edit Profile`}>
-    <div>edit</div>
+    <PageLayout title={`Edit ${profile.nickname} Profile`}>
+    <section className="flex justify-center">
+      <EditionForm profile={profile}/>
+    </section>
     </PageLayout>
   )
 }
 
-export default edit
+export async function getServerSideProps({ params }) {
+  const { id } = params;
+  const response = await fetch(`http://localhost:3001/people/${id}`);
+  const profile = await response.json();
+
+  return {
+    props: {
+      profile,
+    },
+  };
+}

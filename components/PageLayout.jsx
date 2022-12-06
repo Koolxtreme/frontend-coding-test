@@ -40,20 +40,20 @@ function PageLayout({ children, title }) {
               }}
             >
               {
-                <FaArrowAltCircleLeft className="cursor-pointer hover:text-robin-s-egg-blue-600 transition" />
+                <FaArrowAltCircleLeft className="cursor-pointer hover:scale-125 hover:text-robin-s-egg-blue-600 transition" />
               }
             </p>
           </li>
           <li>
             <Link href="/">
               {
-                <FaHome className="cursor-pointer hover:hover:text-robin-s-egg-blue-600 transition" />
+                <FaHome className="cursor-pointer hover:scale-125 hover:text-robin-s-egg-blue-600 transition" />
               }
             </Link>
           </li>
           <li>
             <Link href="/about">
-              <FaQuestion className="cursor-pointer hover:hover:text-robin-s-egg-blue-600 transition" />
+              <FaQuestion className="cursor-pointer hover:scale-125 hover:text-robin-s-egg-blue-600 transition" />
             </Link>
           </li>
         </ul>

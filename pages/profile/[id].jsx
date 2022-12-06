@@ -15,7 +15,6 @@ export async function getServerSideProps({ params }) {
   const { id } = params;
   const response = await fetch(`http://localhost:3001/people/${id}`);
   const profile = await response.json();
-  console.log(profile);
 
   return {
     props: {

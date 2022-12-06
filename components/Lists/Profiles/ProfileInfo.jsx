@@ -1,9 +1,17 @@
 import Image from "next/image";
-import { BsGenderMale, BsGenderFemale } from "react-icons/bs";
+import Link from "next/link";
+import { BsGenderMale, BsGenderFemale, BsFillPencilFill } from "react-icons/bs";
 
 function ProfileInfo({ profile }) {
   return (
-    <section className="mt-8 p-8 border-2 rounded-lg shadow-lg">
+    <section className="relative mt-8 p-8 border-2 rounded-lg shadow-lg">
+      <Link href={`/profile/${profile.id}/edit`}>
+        <a>
+          <span className="absolute top-0 right-0 p-4 bg-yellow-200 rounded-full text-lg">
+            <BsFillPencilFill />
+          </span>
+        </a>
+      </Link>
       <div className="text-center mb-8">
         <Image
           width={200}
@@ -37,9 +45,11 @@ function ProfileInfo({ profile }) {
           <p className="text-robin-s-egg-blue-700">{profile.occupation}</p>
         </div>
         <div className="flex justify-center p-2 text-2xl">
-          {profile.gender === "Male"
-          ? <BsGenderMale className="text-robin-s-egg-blue"/>
-          : <BsGenderFemale className="text-red-violet-300"/>}
+          {profile.gender === "Male" ? (
+            <BsGenderMale className="text-robin-s-egg-blue" />
+          ) : (
+            <BsGenderFemale className="text-red-violet-300" />
+          )}
         </div>
       </div>
     </section>

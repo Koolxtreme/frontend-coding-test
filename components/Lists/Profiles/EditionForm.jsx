@@ -14,11 +14,28 @@ function EditionForm({ profile }) {
   const switchEdition = () => {
     setIsDisabled(!isDisabled);
   };
+  const saveData = () =>{
+    const newData = JSON.stringify({
+      fullName: nome,
+      nickname: nick,
+      age: old,
+      occupation: profession,
+      gender: gen,
+      picture: pick
+    })
+    fetch(`http://localhost:3001/people/${profile.id}`, {
+      method: 'PUT',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: newData
+    }).then((res) => (res ? switchEdition() : alert("Something went wrong")))
+  }
 
   const validation = () => {
     if(nome.length > 0 && nick.length > 0 && old > 0 && profession.length > 0 && pick.length > 0 && gen.length > 0)
     {
-      switchEdition()
+      saveData()
     }
     else{
       alert("Fields must be filled")

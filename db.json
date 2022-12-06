@@ -1,13 +1,13 @@
 {
   "people": [
     {
-      "id": 1,
       "fullName": "John Doe",
+      "nickname": "Jhonsito",
+      "occupation": "Software Dev",
       "age": 32,
-      "occupation": "Software Developer",
-      "nickname": "Johnny",
       "gender": "Male",
-      "picture": "https://randomuser.me/api/portraits/lego/1.jpg"
+      "picture": "https://randomuser.me/api/portraits/lego/1.jpg",
+      "id": 1
     },
     {
       "id": 2,
@@ -55,13 +55,13 @@
       "picture": "https://randomuser.me/api/portraits/lego/6.jpg"
     },
     {
-      "id": 7,
       "fullName": "David Anderson",
-      "age": 38,
-      "occupation": "Police Officer",
       "nickname": "Dave",
+      "age": "39",
+      "occupation": "Police Officer",
       "gender": "Male",
-      "picture": "https://randomuser.me/api/portraits/lego/7.jpg"
+      "picture": "https://randomuser.me/api/portraits/lego/7.jpg",
+      "id": 7
     },
     {
       "id": 8,

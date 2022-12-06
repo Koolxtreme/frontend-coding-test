@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 function ProfileCard({ id, name, source, age, occupation }) {
   return (
@@ -6,10 +7,11 @@ function ProfileCard({ id, name, source, age, occupation }) {
       <Link href={`profile/${id}`}>
         <div className="grid grid-cols-3 bg-gray-50 hover:bg-gray-200 p-2 gap-4 place-content-center place-items-center border-2 border-blue-300 hover:border-robin-s-egg-blue-400 hover:scale-95 rounded-lg transition cursor-pointer hover:shadow-cs">
           <div>
-            <picture>
+            {/* <picture>
               <source srcSet={source} />
               <img src={source} alt={name} className="rounded-full h-20 w-20 md:h-36 md:w-36"/>
-            </picture>
+            </picture> */}
+            <Image src={source} height={90} width={90} alt={`${name}'s photograph`} className="rounded-full"></Image>
           </div>
           <div className="col-span-2 flex flex-col items-start w-full">
             <h2 className="text-xl">{name}</h2>

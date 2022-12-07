@@ -14,6 +14,13 @@ function TaskEdition({ task }) {
   const switchEdition = () => {
     setIsDisabled(!isDisabled);
   };
+  const dateRevision = (date) =>{
+    const today = new Date();
+    const dDate = new Date(date)
+    if(dDate < today) {
+      setCompleted(true);
+    }
+  }
   const saveData = () => {
     const newData = JSON.stringify({
         title,
@@ -110,7 +117,7 @@ function TaskEdition({ task }) {
       />
 
       <input
-        type="text"
+        type="date"
         name="startDate"
         id="startDate"
         value={startDate}
@@ -126,12 +133,14 @@ function TaskEdition({ task }) {
       />
 
       <input
-        type="text"
+        type="date"
         name="endDate"
         id="endDate"
         value={endDate}
         onChange={(e) => {
-          setEndDate(e.target.value);
+          const date = e.target.value;
+          setEndDate(date);
+          dateRevision(date);
         }}
         className={`p-2 rounded-md border-2 ${
           isDisabled
@@ -146,7 +155,7 @@ function TaskEdition({ task }) {
         id="completed"
         value={completed}
         onChange={(e) => {
-            setCompleted(e.target.value);
+            setCompleted(JSON.parse(e.target.value));
         }}
         className={`p-2 rounded-md border-2 ${
           isDisabled

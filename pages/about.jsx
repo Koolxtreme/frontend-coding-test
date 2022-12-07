@@ -21,7 +21,7 @@ function About() {
             </p>
             <p>
               The layout and the navigation where designed thinking on mobile
-              first methodology for providing a full responsive website but there are a couple of interactions that you can appreciate better on desktop.
+              first methodology for providing a full responsive website but there are a couple interactions that you can appreciate better on desktop.
             </p>
             <p>Thank you for your attention.</p>
 

@@ -43,7 +43,7 @@ function EditionForm({ profile }) {
   };
 
   return (
-    <form className="border-2 grid gap-4 p-8 rounded-md mt-8">
+    <form className="border-2 grid gap-4 p-8 rounded-md my-8">
       <div className="flex justify-center">
         {isDisabled ? (
           <a

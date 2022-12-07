@@ -153,7 +153,7 @@ function TaskEdition({ task }) {
         disabled={isDisabled}
       />
 
-        <label htmlFor="completed">Task Completion <span className="text-red-500">*</span></label>
+        <label htmlFor="completed">Task Accomplished <span className="text-red-500">*</span></label>
       <select
         name="completed"
         id="completed"

@@ -4,11 +4,11 @@ import { useState } from "react";
 import { BsFillPencilFill } from "react-icons/bs";
 
 function TaskInfo({ task, person }) {
-  const [completion, setCompletion] = useState(task.completed);
+  const [completed, setCompletion] = useState(task.completed);
 
   const changeTaskState = () => {
-    setCompletion(!completion);
-    const newData = JSON.stringify({ ...task, completed: !completion });
+    setCompletion(!completed);
+    const newData = JSON.stringify({ ...task, completed: !completed });
     fetch(`http://localhost:3001/tasks/${task.id}`, {
       method: "PUT",
       headers: {
@@ -34,7 +34,7 @@ function TaskInfo({ task, person }) {
           <p>{task.description}</p>
         </div>
         <div className="flex justify-center">
-          {completion ? (
+          {completed ? (
             <a
               className="p-2 bg-green-300 rounded-lg text-white cursor-pointer"
               onClick={changeTaskState}

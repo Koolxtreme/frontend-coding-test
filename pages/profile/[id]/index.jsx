@@ -1,6 +1,6 @@
-import PageLayout from "../../components/PageLayout";
-import ProfileInfo from "../../components/Lists/Profiles/ProfileInfo";
-import TasksList from "../../components/Lists/Tasks/TasksList";
+import PageLayout from "../../../components/PageLayout";
+import ProfileInfo from "../../../components/Lists/Profiles/ProfileInfo";
+import TasksList from "../../../components/Lists/Tasks/TasksList";
 
 export default function Profile({ profile, tasks }) {
   return (

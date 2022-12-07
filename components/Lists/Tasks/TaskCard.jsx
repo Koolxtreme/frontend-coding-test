@@ -8,7 +8,6 @@ function TaskCard({ task }) {
   const changeTaskState = () => {
     setCompletion(!completion);
     const newData = JSON.stringify({ ...task, completed: !completion });
-    console.log(newData);
     fetch(`http://localhost:3001/tasks/${task.id}`, {
       method: "PUT",
       headers: {

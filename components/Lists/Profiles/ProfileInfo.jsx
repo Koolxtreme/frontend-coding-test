@@ -7,7 +7,7 @@ function ProfileInfo({ profile }) {
     <section className="relative mt-8 p-8 border-2 rounded-lg shadow-lg">
       <Link href={`/profile/${profile.id}/edit`}>
         <a>
-          <span className="absolute top-0 right-0 p-4 bg-yellow-200 rounded-full text-lg">
+          <span className="absolute top-0 right-0 p-4 bg-yellow-200 hover:bg-yellow-300 hover:scale-90 rounded-full text-lg transition">
             <BsFillPencilFill />
           </span>
         </a>

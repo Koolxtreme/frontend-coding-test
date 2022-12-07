@@ -20,13 +20,13 @@ function TaskInfo({ task, person }) {
   return (
     <section className="flex justify-center p-6">
       <div className="relative p-6 border-2 shadow-lg rounded-lg">
-      <Link href={`/tasks/${task.id}/edit`}>
-        <a>
-          <span className="absolute top-0 right-0 p-4 bg-yellow-200 rounded-full text-lg">
-            <BsFillPencilFill />
-          </span>
-        </a>
-      </Link>
+        <Link href={`/tasks/${task.id}/edit`}>
+          <a>
+            <span className="absolute top-0 right-0 p-4 bg-yellow-200 hover:bg-yellow-300 hover:scale-90 rounded-full text-lg transition">
+              <BsFillPencilFill />
+            </span>
+          </a>
+        </Link>
         <div>
           <h3 className="text-center font-extrabold">{task.title}</h3>
         </div>
@@ -36,14 +36,14 @@ function TaskInfo({ task, person }) {
         <div className="flex justify-center">
           {completed ? (
             <a
-              className="p-2 bg-green-300 rounded-lg text-white cursor-pointer"
+              className="p-2 bg-green-300 hover:bg-green-500 rounded-lg text-white cursor-pointer transition"
               onClick={changeTaskState}
             >
               Completed
             </a>
           ) : (
             <a
-              className="p-2 bg-red-300 rounded-lg text-white cursor-pointer"
+              className="p-2 bg-red-300 hover:bg-red-500 rounded-lg text-white cursor-pointer transition"
               onClick={changeTaskState}
             >
               Pending...

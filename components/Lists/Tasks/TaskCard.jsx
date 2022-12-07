@@ -27,14 +27,14 @@ function TaskCard({ task }) {
         <div className="flex justify-evenly items-center">
           {completion ? (
             <a
-              className="p-2 bg-green-300 rounded-lg text-white cursor-pointer"
+              className="p-2 bg-green-300 hover:bg-green-500 rounded-lg text-white cursor-pointer transition"
               onClick={changeTaskState}
             >
               Completed
             </a>
           ) : (
             <a
-              className="p-2 bg-red-300 rounded-lg text-white cursor-pointer"
+              className="p-2 bg-red-300 hover:bg-red-500 rounded-lg text-white cursor-pointer transition"
               onClick={changeTaskState}
             >
               Pending...
@@ -42,7 +42,7 @@ function TaskCard({ task }) {
           )}
 
           <Link href={`/tasks/${task.id}`}>
-            <a className="p-2 text-robin-s-egg-blue-700">
+            <a className="p-2 text-robin-s-egg-blue-700 hover:text-robin-s-egg-blue-600 hover:scale-125 transition">
               <BiLinkExternal />
             </a>
           </Link>

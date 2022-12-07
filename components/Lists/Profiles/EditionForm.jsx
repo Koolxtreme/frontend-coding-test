@@ -61,6 +61,8 @@ function EditionForm({ profile }) {
           </a>
         )}
       </div>
+
+      <label htmlFor="namae">Full Name <span className="text-red-500">*</span></label>
       <input
         type="text"
         name="namae"
@@ -75,6 +77,7 @@ function EditionForm({ profile }) {
         disabled={isDisabled}
       />
 
+        <label htmlFor="nik">Nickname <span className="text-red-500">*</span></label>
       <input
         type="text"
         name="nik"
@@ -90,7 +93,7 @@ function EditionForm({ profile }) {
         }`}
         disabled={isDisabled}
       />
-
+  <label htmlFor="oldity">Age <span className="text-red-500">*</span></label>
       <input
         type="number"
         name="oldity"
@@ -107,6 +110,7 @@ function EditionForm({ profile }) {
         disabled={isDisabled}
       />
 
+        <label htmlFor="pro">Occupation <span className="text-red-500">*</span></label>
       <input
         type="text"
         name="pro"
@@ -122,7 +126,7 @@ function EditionForm({ profile }) {
         }`}
         disabled={isDisabled}
       />
-
+      <label htmlFor="pic">Link to profile image <span className="text-red-500">*</span></label>
       <input
         type="text"
         name="pic"
@@ -139,6 +143,7 @@ function EditionForm({ profile }) {
         disabled={isDisabled}
       />
 
+  <label htmlFor="gend">Gender <span className="text-red-500">*</span></label>
       <select
         name="gend"
         id="gend"

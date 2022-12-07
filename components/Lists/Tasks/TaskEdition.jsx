@@ -71,6 +71,7 @@ function TaskEdition({ task }) {
           </a>
         )}
       </div>
+      <label htmlFor="title">Task Title <span className="text-red-500">*</span></label>
       <input
         type="text"
         name="title"
@@ -85,6 +86,7 @@ function TaskEdition({ task }) {
         disabled={isDisabled}
       />
 
+      <label htmlFor="description">Task Description <span className="text-red-500">*</span></label>
       <textarea
         name="description"
         id="description"
@@ -100,6 +102,7 @@ function TaskEdition({ task }) {
         disabled={isDisabled}
       />
 
+        <label htmlFor="personId">Person on charge(ID) <span className="text-red-500">*</span></label>
       <input
         type="number"
         name="personId"
@@ -115,7 +118,7 @@ function TaskEdition({ task }) {
         }`}
         disabled={isDisabled}
       />
-
+      <label htmlFor="startDate">Start Date <span className="text-red-500">*</span></label>
       <input
         type="date"
         name="startDate"
@@ -131,7 +134,7 @@ function TaskEdition({ task }) {
         }`}
         disabled={isDisabled}
       />
-
+    <label htmlFor="endDate">Deadline</label>
       <input
         type="date"
         name="endDate"
@@ -150,6 +153,7 @@ function TaskEdition({ task }) {
         disabled={isDisabled}
       />
 
+        <label htmlFor="completed">Task Completion <span className="text-red-500">*</span></label>
       <select
         name="completed"
         id="completed"

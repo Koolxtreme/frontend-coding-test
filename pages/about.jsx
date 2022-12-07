@@ -10,7 +10,7 @@ function About() {
           </h1>
           <div className="grid gap-4">
             <p>
-              Hope you enjoy while review this page, I've tried to give a
+              Hope you enjoy while review this page, I&apos;ve tried to give a
               good UX providing a minimalist design though following the
               <a
                 href="https://www.datasketch.co/"
